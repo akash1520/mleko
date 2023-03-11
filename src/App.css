@@ -1,0 +1,27 @@
+.menuu{
+  color: black;
+}
+
+.bar{
+  position: sticky;
+  top: 0;
+}
+
+.description{
+  max-width: 90%;
+}
+
+
+.imgs{
+  max-width: 500px;
+  height: 100%;
+}
+
+.parts{
+  margin: 3%;
+  display: flex;
+}
+
+.home-text{
+  margin: 5%;
+}
