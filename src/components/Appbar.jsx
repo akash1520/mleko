@@ -14,10 +14,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-
-
-
-
+import { Link } from 'react-router-dom';
 
 
 export default function Appbar() {
@@ -45,7 +42,7 @@ export default function Appbar() {
 
     const mobileMenuId = 'primary-search-account-menu-mobile';
     const renderMobileMenu = (
-        <Menu
+        <Menu 
             anchorEl={mobileMoreAnchorEl}
             anchorOrigin={{
                 vertical: 'top',
@@ -132,38 +129,39 @@ export default function Appbar() {
     );
 
     return (
+        <header>
         <Box sx={{ flexGrow: 1 }} className="bar">
-            <AppBar position="static">
+            <AppBar>
                 <Toolbar className='menuu'>
 
                     <Typography
                         noWrap
                         component="div"
-                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                        sx={{ width:100 }}
                     >
-                        <img width={"70px"} src="https://static.wixstatic.com/media/f306c3_ad9b9f5c7344404fbd78370cc20edb91~mv2.png/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Submark.png" />
+                        <img width={"100px"} src="https://static.wixstatic.com/media/f306c3_ad9b9f5c7344404fbd78370cc20edb91~mv2.png/v1/fill/w_160,h_160,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Submark.png" />
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <Typography
                             component="div"
                             sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            <a style={{ marginRight: "2em" }}>Home</a>
+                            <Link to="/" style={{ marginRight: "2em",textDecorationLine:"none" }}>Home</Link>
                         </Typography>
                         <Typography
                             component="div"
                             sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            <a style={{ marginRight: "2em" }}>Home</a>
+                            <Link to="/speciality" style={{ marginRight: "2em",textDecorationLine:"none" }}>Specialty coffee house</Link>
                         </Typography>
                         <Typography
                             component="div"
                             sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            <a style={{ marginRight: "2em" }}>Home</a>
+                            <Link to="/menu" style={{ marginRight: "2em",textDecorationLine:"none" }}>Menu</Link>
                         </Typography>
                         <Typography
                             component="div"
                             sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            <a style={{ marginRight: "2em" }}>Home</a>
+                            <a style={{ marginRight: "2em" }}>Coffee and Subscription</a>
                         </Typography>
                         <Typography
                             component="div"
@@ -182,7 +180,7 @@ export default function Appbar() {
                         </Typography>
 
                     </Box>
-                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ display: { xs: 'flex', md: 'none' } }} >
                         <IconButton
                             size="large"
                             aria-label="show more"
@@ -201,5 +199,6 @@ export default function Appbar() {
             </AppBar>
             {renderMobileMenu}
         </Box>
+        </header>
     );
 }

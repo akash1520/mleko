@@ -1,0 +1,35 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  
+
+  .grid-container > div {
+    background-color: rgba(251, 251, 248, 0.553);
+    border-radius: 2%;
+    padding: 20px 20px;
+  }
+  .grid-container > div >div {
+    text-align: left;
+    font-size: 10px;
+  }
+
+
+  .grid-container > div >img {
+    max-height: 300px;
+    border-radius: 50%;
+    padding-bottom: 1em;
+  }
+
+
+  .img1{
+    max-height: 350px;
+  }
+
+@media screen and (max-width:800px) {
+.grid-container{
+    display: block;
+}
+}
